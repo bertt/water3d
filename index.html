@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Water Pool – Three.js</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <aside id="panel">
+    <h1>Water Pool</h1>
+    <p class="hint">Click on the water to create ripples.</p>
+
+    <label>
+      <span>Wave speed <output id="waveSpeedValue"></output></span>
+      <input id="waveSpeed" type="range" min="0.3" max="1.9" step="0.05" value="1.2">
+    </label>
+    <label>
+      <span>Surface tension <output id="surfaceTensionValue"></output></span>
+      <input id="surfaceTension" type="range" min="0" max="0.3" step="0.01" value="0.18">
+    </label>
+    <label>
+      <span>Damping <output id="dampingValue"></output></span>
+      <input id="damping" type="range" min="0" max="100" step="1" value="15">
+    </label>
+    <label>
+      <span>Drop size <output id="dropSizeValue"></output></span>
+      <input id="dropSize" type="range" min="0.02" max="0.15" step="0.005" value="0.07">
+    </label>
+    <label>
+      <span>Drop strength <output id="dropStrengthValue"></output></span>
+      <input id="dropStrength" type="range" min="0.001" max="0.012" step="0.0005" value="0.004">
+    </label>
+    <label class="checkbox">
+      <input id="caustics" type="checkbox" checked>
+      <span>Caustics</span>
+    </label>
+    <button id="reset" type="button">Reset water</button>
+  </aside>
+
+  <div id="error" hidden></div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

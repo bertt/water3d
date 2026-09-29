@@ -1,0 +1,103 @@
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #1d2426;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #e8eef0;
+}
+
+#scene {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  cursor: crosshair;
+}
+
+#panel {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  width: 230px;
+  padding: 14px 16px;
+  background: rgba(20, 28, 32, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  font-size: 13px;
+  user-select: none;
+}
+
+#panel h1 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#panel .hint {
+  margin: 0 0 12px;
+  color: #a9bac0;
+}
+
+#panel label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#panel label span {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+#panel output {
+  color: #8fd3ea;
+  font-variant-numeric: tabular-nums;
+}
+
+#panel input[type="range"] {
+  width: 100%;
+  accent-color: #4fb3d9;
+}
+
+#panel label.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#panel label.checkbox span {
+  margin: 0;
+}
+
+#panel button {
+  width: 100%;
+  padding: 7px 0;
+  border: 0;
+  border-radius: 6px;
+  background: #2f7fa3;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+#panel button:hover {
+  background: #3a93bb;
+}
+
+#error {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #1d2426;
+  font-size: 16px;
+  text-align: center;
+}
+
+#error[hidden] {
+  display: none;
+}
