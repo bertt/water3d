@@ -1,5 +1,7 @@
 # Water Pool
 
+**Live demo:** https://bertt.github.io/water3d/
+
 A top-down view of a shallow, tiled water pool rendered with [three.js](https://threejs.org/).
 No frameworks and no build step. It is plain HTML, CSS and ES modules.
 
